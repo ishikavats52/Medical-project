@@ -23,6 +23,7 @@ try {
           var mailOptions = {
             from: 'ashtyn99@ethereal.email',
             to: `${email}`,
+
             subject: 'Your OTP Verification Code',
             text: `
             Hi ${email},
@@ -39,6 +40,7 @@ try {
             
            Medico
             }`
+
           };
           
           transporter.sendMail(mailOptions, function(error, info){

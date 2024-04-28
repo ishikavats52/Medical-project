@@ -60,4 +60,6 @@ const doctor_login = async (req, res, next) => {
   }
 };
 
-module.exports = { authmid, doctor_login };
+module.exports = { authmid, doctor_login };=======
+
+

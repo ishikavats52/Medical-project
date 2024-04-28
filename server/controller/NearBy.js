@@ -2,7 +2,9 @@ const { doctor } = require("../Modals/User");
 const nodemailer = require('nodemailer');
 
 const Findnearby = async (req, res) => {
+
     const { location, email,disease,phone,address } = req.body;
+
     try {
         const neardoc = await doctor.aggregate([{
             $geoNear: {
@@ -34,6 +36,7 @@ const Findnearby = async (req, res) => {
             const mailOptions = {
                 from: "ashtyn99@ethereal.email",
                 to: elem.email,
+
                 subject: ` Consultation Request for `,
                 text: `
                 Hello Dr. ${elem.username},
@@ -53,6 +56,7 @@ const Findnearby = async (req, res) => {
                 Best regards,
                 
                 Medico`,
+
             };
 
             transporter.sendMail(mailOptions, function (error, info) {

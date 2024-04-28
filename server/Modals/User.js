@@ -62,8 +62,10 @@ required:true
     },
     isdoctor:{
         type:String,
+
         default:1,
         required:true
+
     },
     category:{
         type:String,
