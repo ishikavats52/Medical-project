@@ -1,0 +1,10 @@
+const express= require("express");
+const { register_user, auth_otp, login} = require("../controller/user_Auth");
+const { Findnearby } = require("../controller/NearBy");
+const authmid = require("../middleware/Middleware");
+const route= express.Router();
+route.post("/user",register_user);
+route.post("/login",login);
+route.post("/otp",auth_otp);
+route.get("/nearby",Findnearby);
+module.exports=route;   
