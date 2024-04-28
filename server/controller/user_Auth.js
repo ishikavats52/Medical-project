@@ -23,8 +23,22 @@ try {
           var mailOptions = {
             from: 'ashtyn99@ethereal.email',
             to: `${email}`,
-            subject: 'your otp',
-            text: `this is your otp don't share it with anybody${otp}`
+            subject: 'Your OTP Verification Code',
+            text: `
+            Hi ${email},
+            
+            To proceed with your request, please use the following One-Time Password (OTP) to complete the verification process.
+            
+            Your OTP is: ${otp}
+            
+            Please note that this OTP is valid for [validity period, e.g., 10 minutes]. For security reasons, do not share this code with anyone. If you did not request this OTP, please let us know immediately.
+            
+            If you have any questions or need further assistance, feel free to reply to this email, and we'll be happy to help.
+            
+            Best regards,
+            
+           Medico
+            }`
           };
           
           transporter.sendMail(mailOptions, function(error, info){
