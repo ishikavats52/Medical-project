@@ -73,7 +73,7 @@ try {
     if (!verifypass) {
       return res.status(400).send("wrong password");
     }
- const token= jwt.sign({email},"ayushchauhanjwtkey",{expiresIn:"10day"})
+ const token= jwt.sign({userexist},"ayushchauhanjwtkey",{expiresIn:"10day"})
  return res.status(200).json({userexist,token});
 
 

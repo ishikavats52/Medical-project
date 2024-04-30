@@ -16,19 +16,22 @@ const userlistbydoc=  new Schema({
         required:true,
         type:String
     },
-    disease:{
-        required:true,
+
+    doctoremail:{
+        // required:true,
         type:String
     },
 reports:[{
-    type:Buffer,
-   
+    type: Schema.Types.Mixed, 
+    required: true,
 }],
-doctor_detail:{
+doctor_detail:[{
     type:Schema.Types.ObjectId,
-    ref:"doctor_schema",
+    ref:"doctor_data",
     required:true
-},
+}
+],
+
 city:{
     type:String,
     required:true

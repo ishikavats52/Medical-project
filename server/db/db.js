@@ -8,8 +8,8 @@ const uri="mongodb+srv://ayushchauhan22115:UZnIX2n3e5mys5Lg@cluster0.bgbir4z.mon
     } catch (error) {
         console.log(error)
     }
-    120136
+   
  
  }
-//  UZnIX2n3e5mys5Lg
+
 module.exports= connectdb;
