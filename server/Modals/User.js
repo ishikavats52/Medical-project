@@ -60,6 +60,7 @@ const doctor_schema = new Schema({
         type: Buffer,
         required: true
     },
+
     isdoctor: {
         type: String,
         default: 1,

@@ -62,4 +62,6 @@ console.log(req.user)
   }
 };
 
-module.exports = { authmid, doctor_login };
+module.exports = { authmid, doctor_login };=======
+
+
