@@ -11,14 +11,16 @@ const authmid = async (req, res, next) => {
     const jwttoken = token.replace("Bearer ", "").trim();
     const isverified = jwt.verify(jwttoken, "ayushchauhanjwtkey");
 
-    if (!isverified || !isverified._id) {
+    if (!isverified ||!isverified.userexist) {
       return res.status(401).send("Unauthorized: Invalid token");
     }
 
-    const verifieduser = await normal_user.findById(isverified._id).select({
+    const useremail=isverified.userexist.email;
+    console.log(isverified.userexist.email )
+    const verifieduser = await normal_user.findOne({email:useremail}).select({
       password: 0,
     });
-
+console.log(verifieduser)
     if (!verifieduser) {
       return res.status(404).send("User not found");
     }
@@ -42,14 +44,14 @@ const doctor_login = async (req, res, next) => {
 
     const jwttoken = token.replace("Bearer ", "").trim();
     const isverified = jwt.verify(jwttoken, "ayushchauhanjwtkey");
-
+console.log( isverified)
     if (!isverified) {
       return res.status(401).send("Unauthorized: Invalid token");
     }
 
-    req.user = isverified;
-
-    if (!isverified.isdoctor) {
+    req.user = isverified.userexist;
+console.log(req.user)
+    if (!isverified.isdoctor==0) {
       return res.status(403).send("Forbidden: You are not a doctor");
     }
 
