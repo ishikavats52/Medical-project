@@ -16,6 +16,7 @@ const userlistbydoc=  new Schema({
         required:true,
         type:String
     },
+
     doctoremail:{
         // required:true,
         type:String
@@ -30,6 +31,7 @@ doctor_detail:[{
     required:true
 }
 ],
+
 city:{
     type:String,
     required:true

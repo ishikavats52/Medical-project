@@ -8,6 +8,7 @@ const authmid = async (req, res, next) => {
       return res.status(401).send("Unauthorized: No token provided");
     }
 
+
     const jwttoken = token.replace("Bearer ", "").trim();
     const isverified = jwt.verify(jwttoken, "ayushchauhanjwtkey");
 
@@ -35,11 +36,13 @@ console.log(verifieduser)
   }
 };
 
+
 const doctor_login = async (req, res, next) => {
   try {
     const token = req.header("Authorization");
     if (!token) {
       return res.status(401).send("Unauthorized: No token provided");
+
     }
 
     const jwttoken = token.replace("Bearer ", "").trim();
@@ -62,6 +65,8 @@ console.log(req.user)
   }
 };
 
+
 module.exports = { authmid, doctor_login };
+
 
 
