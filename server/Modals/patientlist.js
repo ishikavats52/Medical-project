@@ -12,7 +12,7 @@ const userlistbydoc=  new Schema({
         required:true,
         type:String
     },
-    
+
 reports:[{
     type: Schema.Types.Mixed, 
     required: true,
@@ -23,6 +23,7 @@ doctor_detail:[{
     required:true
 }
 ],
+
 city:{
     type:String,
     required:true

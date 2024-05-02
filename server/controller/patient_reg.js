@@ -1,4 +1,5 @@
 const { doctor, normal_user } = require("../Modals/User");
+
 const doctor_model = require("../Modals/doctorlist");
 const listed_user= require("../Modals/patientlist")
 const list_patient= async(req,res)=>{
@@ -8,6 +9,7 @@ console.log(doctor_detail)
 const doctor_name=req.user.username;
 const doc_email=req.user.email;
 console.log(doctor_detail)
+
     try {
        const doctor_valid= await doctor.findById(doctor_detail);
        if (!doctor_valid) {
@@ -17,6 +19,7 @@ console.log(doctor_detail)
        if (!userexist) {
         return res.status(404).send("User not found")
        }
+
      
       console.log("docemail",doc_email)
     const finddata= await listed_user.findOne({email});
@@ -36,6 +39,7 @@ console.log(doctor_detail)
       const updatedoc= await doctor_model.findOneAndUpdate({email:doc_email},{$push:{patient:userexist._id}},{new:true})
       console.log("usercreted2",updatedoc)
       return res.status(200).json({updated});
+
     } catch (error) {
         console.log(error,"error in report creation")
         return res.status(500);
