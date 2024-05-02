@@ -12,15 +12,7 @@ const userlistbydoc=  new Schema({
         required:true,
         type:String
     },
-    doctor_name:{
-        required:true,
-        type:String
-    },
 
-    doctoremail:{
-        // required:true,
-        type:String
-    },
 reports:[{
     type: Schema.Types.Mixed, 
     required: true,

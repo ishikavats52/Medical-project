@@ -25,7 +25,7 @@ console.log(doctor_detail)
     const finddata= await listed_user.findOne({email});
     const doctorlist= await doctor_model.findOne({email:doc_email});
     if (!finddata ) {
-        const userreport= await listed_user.create({username:userexist.username,phone:userexist.phone,email,doctor_name,doctor_email:doc_email,reports,doctor_detail:[doctor_detail],city,location});
+        const userreport= await listed_user.create({username:userexist.username,phone:userexist.phone,email,reports,doctor_detail:[doctor_detail],city,location});
        
         res.status(200).json({userreport});
     }
