@@ -1,679 +1,165 @@
-import React from 'react'
-import "./home.css"
+import React from 'react';
+
 function Home() {
   return (
     <>
-      <div class="hero_area">
-
-        <section class="slider_section ">
-          <div class="dot_design">
-            <img src="images/dots.png" alt="" />
-          </div>
-          <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="container ">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="detail-box">
-                        <div class="play_btn">
-                          <button>
-                            <i class="fa fa-play" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                        <h1>
-                          Mico <br />
-                          <span>
-                            Hospital
-                          </span>
-                        </h1>
-                        <p>
-                          when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                        </p>
-                        <a href="">
-                          Contact Us
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="img-box">
-                        <img src="images/slider-img.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container ">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="detail-box">
-                        <div class="play_btn">
-                          <button>
-                            <i class="fa fa-play" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                        <h1>
-                          Mico <br />
-                          <span>
-                            Hospital
-                          </span>
-                        </h1>
-                        <p>
-                          when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                        </p>
-                        <a href="">
-                          Contact Us
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="img-box">
-                        <img src="images/slider-img.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container ">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="detail-box">
-                        <div class="play_btn">
-                          <button>
-                            <i class="fa fa-play" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                        <h1>
-                          Mico <br />
-                          <span>
-                            Hospital
-                          </span>
-                        </h1>
-                        <p>
-                          when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                        </p>
-                        <a href="">
-                          Contact Us
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="img-box">
-                        <img src="images/slider-img.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel_btn-box">
-              <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
-                <img src="images/prev.png" alt="" />
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
-                <img src="images/next.png" alt="" />
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-
-        </section>
-
+     <div className="hero-div">
+      <img
+        src="img/1000_F_466414200_TUwqAaiQOM9RhMG38DXW03WXbzh4lHkX.jpg"
+        alt=""
+        srcSet=""
+      />
+      <div className="hero-content">
+        <p className="p1 d-flex">Secure your world now</p>
+        <h6>Excellence, Dedicated, and Experienced Laboratory Technologists</h6>
+        <h1 className="hero-content-h1">
+          Subtle Clinical & <br /> Laboratory Tests!
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, reiciendis!</p>
+        <div className="btns d-flex justify-content-evenly">
+          <div className="btn-div">Book A Home Visit</div>
+          <div className="btn-div">Tests And Services</div>
+        </div>
       </div>
-
-
-      <section class="book_section layout_padding">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <form>
-                <h4>
-                  BOOK <span>APPOINTMENT</span>
-                </h4>
-                <div class="form-row ">
-                  <div class="form-group col-lg-4">
-                    <label for="inputPatientName">Patient Name </label>
-                    <input type="text" class="form-control" id="inputPatientName" placeholder="" />
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <label for="inputDoctorName">Doctor's Name</label>
-                    <select name="" class="form-control wide" id="inputDoctorName">
-                      <option value="Normal distribution ">Normal distribution </option>
-                      <option value="Normal distribution ">Normal distribution </option>
-                      <option value="Normal distribution ">Normal distribution </option>
-                    </select>
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <label for="inputDepartmentName">Department's Name</label>
-                    <select name="" class="form-control wide" id="inputDepartmentName">
-                      <option value="Normal distribution ">Normal distribution </option>
-                      <option value="Normal distribution ">Normal distribution </option>
-                      <option value="Normal distribution ">Normal distribution </option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-row ">
-                  <div class="form-group col-lg-4">
-                    <label for="inputPhone">Phone Number</label>
-                    <input type="number" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX" />
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <label for="inputSymptoms">Symptoms</label>
-                    <input type="text" class="form-control" id="inputSymptoms" placeholder="" />
-                  </div>
-                  <div class="form-group col-lg-4">
-                    <label for="inputDate">Choose Date </label>
-                    <div class="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
-                      <input type="text" class="form-control" readonly />
-                      <span class="input-group-addon date_icon">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button type="submit" class="btn ">Submit Now</button>
-                </div>
-              </form>
-            </div>
+    </div>
+      <div className="hero-div-2">
+        <h1>Facilities We Offer</h1>
+        <div className="facilitydiv">
+          <div className="fac-1">
+            <h1>Appointment</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum commodi quisquam quas, harum
+              provident at corporis debitis, dolore ad necessitatibus quos, et est assumenda a consectetur.
+              Dolorum optio nihil modi quibusdam tempore distinctio nam!
+            </p>
+          </div>
+          <div className="fac-1">
+            <h1>Appointment</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum commodi quisquam quas, harum
+              provident at corporis debitis, dolore ad necessitatibus quos, et est assumenda a consectetur.
+              Dolorum optio nihil modi quibusdam tempore distinctio nam!
+            </p>
           </div>
         </div>
-      </section>
+      </div>
 
-
-
-      <section class="about_section">
-        <div class="container  ">
-          <div class="row">
-            <div class="col-md-6 ">
-              <div class="img-box">
-                <img src="images/about-img.jpg" alt="" />
+      <div className="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+              <div className="d-inline-flex align-items-center">
+                <a className="text-decoration-none text-body pe-3" href="">
+                  <i className="bi bi-telephone me-2"></i>+012 345 6789
+                </a>
+                <span className="text-body">|</span>
+                <a className="text-decoration-none text-body px-3" href="">
+                  <i className="bi bi-envelope me-2"></i>info@example.com
+                </a>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="detail-box">
-                <div class="heading_container">
-                  <h2>
-                    About <span>Hospital</span>
-                  </h2>
-                </div>
-                <p>
-                  has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
-                </p>
-                <a href="">
-                  Read More
+            <div className="col-md-6 text-center text-lg-end">
+              <div className="d-inline-flex align-items-center">
+                <a className="text-body px-2" href="">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a className="text-body px-2" href="">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a className="text-body px-2" href="">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a className="text-body px-2" href="">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a className="text-body ps-2" href="">
+                  <i className="fab fa-youtube"></i>
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-
-
-      <section class="treatment_section layout_padding">
-        <div class="side_img">
-          <img src="images/treatment-side-img.jpg" alt="" />
-        </div>
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h2>
-              Hospital <span>Treatment</span>
-            </h2>
+      {/* Blog Section */}
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="text-center mx-auto mb-5" style={{ maxWidth: '500px' }}>
+            <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
+            <h1 className="display-4">Our Latest Medical Blog Posts</h1>
           </div>
-          <div class="row">
-            <div class="col-md-6 col-lg-3">
-              <div class="box ">
-                <div class="img-box">
-                  <img src="images/t1.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h4>
-                    Nephrologist Care
-                  </h4>
-                  <p>
-                    alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-                  </p>
-                  <a href="">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box ">
-                <div class="img-box">
-                  <img src="images/t2.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h4>
-                    Eye Care
-                  </h4>
-                  <p>
-                    alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-                  </p>
-                  <a href="">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box ">
-                <div class="img-box">
-                  <img src="images/t3.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h4>
-                    Pediatrician Clinic
-                  </h4>
-                  <p>
-                    alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-                  </p>
-                  <a href="">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="box ">
-                <div class="img-box">
-                  <img src="images/t4.png" alt="" />
-                </div>
-                <div class="detail-box">
-                  <h4>
-                    Parental Care
-                  </h4>
-                  <p>
-                    alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-                  </p>
-                  <a href="">
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="team_section layout_padding">
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h2>
-              Our <span>Doctors</span>
-            </h2>
-          </div>
-          <div class="carousel-wrap ">
-            <div class="owl-carousel team_carousel">
-              <div class="item">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/team1.jpg" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Hennry
-                    </h5>
-                    <h6>
-                      MBBS
-                    </h6>
-                    <div class="social_box">
-                      <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/team2.jpg" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Jenni
-                    </h5>
-                    <h6>
-                      MBBS
-                    </h6>
-                    <div class="social_box">
-                      <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="images/team3.jpg" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Morco
-                    </h5>
-                    <h6>
-                      MBBS
-                    </h6>
-                    <div class="social_box">
-                      <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="client_section layout_padding">
-        <div class="container">
-          <div class="heading_container">
-            <h2>
-              <span>Testimonial</span>
-            </h2>
-          </div>
-        </div>
-        <div class="container px-0">
-          <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="box">
-                  <div class="client_info">
-                    <div class="client_name">
-                      <h5>
-                        Morijorch
-                      </h5>
-                      <h6>
-                        Default model text
-                      </h6>
-                    </div>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                  <p>
-                    editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="box">
-                  <div class="client_info">
-                    <div class="client_name">
-                      <h5>
-                        Rochak
-                      </h5>
-                      <h6>
-                        Default model text
-                      </h6>
-                    </div>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                  <p>
-                    Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-                  </p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="box">
-                  <div class="client_info">
-                    <div class="client_name">
-                      <h5>
-                        br/ad Johns
-                      </h5>
-                      <h6>
-                        Default model text
-                      </h6>
-                    </div>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                  <p>
-                    Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel_btn-box">
-              <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact_section layout_padding-bottom">
-        <div class="container">
-          <div class="heading_container">
-            <h2>
-              Get In Touch
-            </h2>
-          </div>
-          <div class="row">
-            <div class="col-md-7">
-              <div class="form_container">
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Full Name" />
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" />
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
-                  <div>
-                    <input type="text" class="message-box" placeholder="Message" />
-                  </div>
-                  <div class="btn_box">
-                    <button>
-                      SEND
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="img-box">
-                <img src="images/contact-img.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="info_section ">
-        <div class="container">
-          <div class="info_top">
-            <div class="info_logo">
-              <a href="">
-                <img src="images/logo.png" alt="" />
-              </a>
-            </div>
-            <div class="info_form">
-              <form action="">
-                <input type="email" placeholder="Your email" />
-                <button>
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="info_bottom layout_padding2">
-            <div class="row info_main_row">
-              <div class="col-md-6 col-lg-3">
-                <h5>
-                  Address
-                </h5>
-                <div class="info_contact">
-                  <a href="">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <span>
-                      Location
-                    </span>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <span>
-                      Call +01 1234567890
-                    </span>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-envelope"></i>
-                    <span>
-                      demo@gmail.com
-                    </span>
-                  </a>
-                </div>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="info_links">
-                  <h5>
-                    Useful link
-                  </h5>
-                  <div class="info_links_menu">
-                    <a class="active" href="index.html">
-                      Home
+          <div className="row g-5">
+            {[
+              { img: 'img/blog-1.jpg', title: 'Dolor clita vero elitr sea stet dolor justo diam', desc: 'Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum clita rebum dolor stet amet justo', author: 'John Doe', views: 12345, comments: 123 },
+              { img: 'img/blog-2.jpg', title: 'Dolor clita vero elitr sea stet dolor justo diam', desc: 'Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum clita rebum dolor stet amet justo', author: 'John Doe', views: 12345, comments: 123 },
+              { img: 'img/blog-3.jpg', title: 'Dolor clita vero elitr sea stet dolor justo diam', desc: 'Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum clita rebum dolor stet amet justo', author: 'John Doe', views: 12345, comments: 123 },
+            ].map((post, index) => (
+              <div key={index} className="col-xl-4 col-lg-6">
+                <div className="bg-light rounded overflow-hidden">
+                  <img className="img-fluid w-100" src={post.img} alt="" />
+                  <div className="p-4">
+                    <a className="h3 d-block mb-3" href="">
+                      {post.title}
                     </a>
-                    <a href="about.html">
-                      About
-                    </a>
-                    <a href="treatment.html">
-                      Treatment
-                    </a>
-                    <a href="doctor.html">
-                      Doctors
-                    </a>
-                    <a href="testimonial.html">
-                      Testimonial
-                    </a>
-                    <a href="contact.html">
-                      Contact us
-                    </a>
+                    <p className="m-0">{post.desc}</p>
+                  </div>
+                  <div className="d-flex justify-content-between border-top p-4">
+                    <div className="d-flex alignments-center">
+                      <img className="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="" />
+                      <small>{post.author}</small>
+                    </div>
+                    <div className="d-flex alignments-center">
+                      <small className="ms-3">
+                        <i className="far fa-eye text-primary me-1"></i>{post.views}
+                      </small>
+                      <small className="ms-3">
+                        <i className="far fa-comment text-primary me-1"></i>{post.comments}
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="info_post">
-                  <h5>
-                    LATEST POSTS
-                  </h5>
-                  <div class="post_box">
-                    <div class="img-box">
-                      <img src="images/post1.jpg" alt="" />
-                    </div>
-                    <p>
-                      Normal
-                      distribution
-                    </p>
-                  </div>
-                  <div class="post_box">
-                    <div class="img-box">
-                      <img src="images/post2.jpg" alt="" />
-                    </div>
-                    <p>
-                      Normal
-                      distribution
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="info_post">
-                  <h5>
-                    News
-                  </h5>
-                  <div class="post_box">
-                    <div class="img-box">
-                      <img src="images/post3.jpg" alt="" />
-                    </div>
-                    <p>
-                      Normal
-                      distribution
-                    </p>
-                  </div>
-                  <div class="post_box">
-                    <div class="img-box">
-                      <img src="images/post4.png" alt="" />
-                    </div>
-                    <p>
-                      Normal
-                      distribution
-                    </p>
-                  </div>
-                </div>
-              </div>
+            ))}
+            <div className="col-12 text-center">
+              <button className="btn btn-primary py-3 px-5">Load More</button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-
-
-
-      <footer class="footer_section">
-        <div class="container">
-          <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved By
-            <a href="https://html.design/">Free Html Templates</a>
-          </p>
+      {/* Services Section */}
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="text-center mx-auto mb-5" style={{ maxWidth: '500px' }}>
+            <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
+            <h1 class="display-4">Excellent Medical Services</h1>
+          </div>
+          <div className="row g-5">
+            {[
+              { icon: 'fa-user-md', name: 'Emergency Care', desc: 'Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit' },
+              { icon: 'fa-procedures', name: 'Operation & Surgery', desc: 'Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit' },
+              { icon: 'fa-stethoscope', name: 'Outdoor Checkup', desc: 'Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit' },
+            ].map((service, index) => (
+              <div key={index} className="col-lg-4 col-md-6">
+                <div className="service-item bg-light rounded d-flex flex-column alignments-center justify-content-center text-center">
+                  <div className="service-icon mb-4">
+                    <i className={`fa fa-2x ${service.icon} text-white`}></i>
+                  </div>
+                  <h4 className="mb-3">{service.name}</h4>
+                  <p className="m-0">{service.desc}</p>
+                  <a className="btn btn-lg btn-primary rounded-pill" href="">
+                    <i className="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </footer>
+      </div>
+
+     
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
