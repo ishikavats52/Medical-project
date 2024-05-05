@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { normal_user } = require("../Modals/User");
-
+// All middleware
 const authmid = async (req, res, next) => {
   try {
     const token = req.header("Authorization");
@@ -26,7 +26,8 @@ console.log(verifieduser)
       return res.status(404).send("User not found");
     }
 
-    req.emaildata = verifieduser.email;
+    req.emaildata =verifieduser.email;
+    console.log(req.emaildata)
     req.username = verifieduser.username;
 
     next();

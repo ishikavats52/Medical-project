@@ -5,9 +5,9 @@ const nodemailer = require('nodemailer');
 const register_user= async (req,res)=>{
   const {username,phone ,email,password,country,degreecode,certificate,category,location}=req.body;
 try {
-    const userexist=degreecode? await doctor.findOne({email}):await normal_user.findOne({email});
+    const userexist= degreecode? await doctor.findOne({email}):await normal_user.findOne({email});
     if (!userexist) {
-      const otp=Math.floor(100000+ Math.random()*100000)
+      const otp=Math.floor(100000 + Math.random()*100000)
        console.log(otp)
        
         const hashpassword= await bcrypt.hash(password,10)
@@ -64,9 +64,10 @@ try {
 
 }
 const login= async (req,res)=>{
-const {email,password}=req.body;
+const {email,password,isdoc}=req.body;
 try {
-  const userexist= await doctor.findOne({email})||await normal_user.findOne({email});
+  console.log(isdoc)
+  const userexist= isdoc? await doctor.findOne({email}):await normal_user.findOne({email});
   console.log(userexist)
   if (userexist) {
     const verifypass= await bcrypt.compare(password,userexist.password);
