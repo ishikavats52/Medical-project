@@ -1,4 +1,5 @@
 import { doctor, normal_user } from "../Modals/User";
+
 const emailfun=(user,email)=>{
     const otp=Math.floor(100000+ Math.random()*100000)
     console.log(otp)
@@ -72,4 +73,5 @@ try {
 } catch (error) {
     
 }
+
 }

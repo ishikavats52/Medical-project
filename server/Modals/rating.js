@@ -1,4 +1,6 @@
+
 const{Schema,model,Types}= require("mongoose")
+
 const ratingmodel= new Schema({
     username:{
         required:true,
@@ -8,16 +10,15 @@ const ratingmodel= new Schema({
         required:true,
         type:String
     },
+
     doc_id:{
         required:true,
         type:  String,
     },
-    docname:{
-        required:true,
-        type:String
-    },
+
     rating:{
         required:true,
+
 type:Number
     },
     review:{
@@ -28,3 +29,4 @@ type:String
 
 const rate= new model("doc_rating", ratingmodel);
 module.exports=rate;
+

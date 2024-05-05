@@ -1,7 +1,9 @@
 import React from 'react';
+
 import ContactSection from './Contact';
 import AppointmentSection from './Appointment';
 import DoctorsSection from './Doctorsection';
+
 
 function Home() {
   return (
@@ -35,6 +37,7 @@ function Home() {
               provident at corporis debitis, dolore ad necessitatibus quos, et est assumenda a consectetur.
               Dolorum optio nihil modi quibusdam tempore distinctio nam!
             </p>
+
           </div>
           <div className="fac-1">
             <h1>Appointment</h1>
@@ -79,12 +82,12 @@ function Home() {
                   <i className="fab fa-youtube"></i>
                 </a>
               </div>
+
             </div>
           </div>
         </div>
       </div>
-{/* <DoctorsSection/> */}
-     <AppointmentSection/>
+
 
       {/* Services Section */}
       <div className="container-fluid py-5">
@@ -116,7 +119,7 @@ function Home() {
         </div>
       </div>
 
-      <ContactSection/>
+
     </>
   );
 }

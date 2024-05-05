@@ -4,7 +4,9 @@ const { Findnearby } = require("../controller/NearBy");
 const {authmid,doctor_login}= require("../middleware/Middleware");
 const list_patient = require("../controller/patient_reg");
 const {patient_data,userdetailtodoctor} = require("../controller/Detailsend");
+
 const {ratedata,sendratings} = require("../controller/Ratingdoc");
+
 const route= express.Router();
 
 // All routes
@@ -17,4 +19,5 @@ route.get("/patient_data",authmid,patient_data)
 route.get("/patient_data_to_doc",doctor_login,userdetailtodoctor)
 route.post("/ratedoc",authmid,ratedata)
 route.get("/ratingview",sendratings)
+
 module.exports=route;   

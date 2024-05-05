@@ -1,3 +1,4 @@
+
 const { normal_user, doctor } = require("../Modals/User");
 const rate = require("../Modals/rating");
 
@@ -46,3 +47,4 @@ $group:{
 }
 }
 module.exports= {ratedata, sendratings};
+

@@ -7,11 +7,13 @@ import Login from './component/Login'
 import Register from './component/Register'
 import Footer from './component/Footer'
 import Logout from './component/Logout'
+
 import MedicalDashboard from './component/das'
 // import MedicalWebsiteHomePage from './component/Home'
 import MedicalWebsite from './component/Home'
 // import MedicalVisits from './component/Patient'
 // import Component from './component/nearby'
+
 
 function App() {
   return (
