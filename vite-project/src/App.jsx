@@ -11,6 +11,7 @@ import Logout from './component/Logout'
 import MedicalDashboard from './component/das'
 // import MedicalWebsiteHomePage from './component/Home'
 import MedicalWebsite from './component/Home'
+import DoctorRegistrationForm from './component/Doctorlogin'
 // import MedicalVisits from './component/Patient'
 // import Component from './component/nearby'
 
@@ -26,6 +27,7 @@ function App() {
       <Route path='/' element={<MedicalWebsite/>}/>
       <Route path='/dash' element={<MedicalDashboard/>}/>
       {/* <Route path='/daspatient' element={<MedicalVisits/>}/> */}
+      <Route path='/DocReg' element={<DoctorRegistrationForm/>}/>
     </Routes>
     
 

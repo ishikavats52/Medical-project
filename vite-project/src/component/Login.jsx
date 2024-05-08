@@ -6,7 +6,6 @@ import { useAuth } from '../ContextApi/Authcontext';
 function Login() {
 const navigate=useNavigate()
 const{auth}=useAuth()
-  const[token,settoken]=useState()
   const [user,setuser]=useState({
     "email":"",
     "password":""

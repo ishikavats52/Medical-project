@@ -88,7 +88,7 @@ function Home() {
         </div>
       </div>
 
-
+<AppointmentSection/>
       {/* Services Section */}
       <div className="container-fluid py-5">
         <div className="container">
@@ -118,7 +118,7 @@ function Home() {
           </div>
         </div>
       </div>
-
+<ContactSection/>
 
     </>
   );

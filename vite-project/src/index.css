@@ -287,3 +287,26 @@ color: white;
     background:linear-gradient(90deg,#F248FF,#7C53E2);
 
   }
+  
+  
+.card-body {
+  overflow-x: auto;
+  height: 100%;
+}
+
+ ::-webkit-scrollbar {
+  width: 5px; 
+  height: 5px; 
+}
+
+ ::-webkit-scrollbar-button {
+  background-color: #262626; 
+}
+ ::-webkit-scrollbar-thumb {
+  background-color: #555; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
