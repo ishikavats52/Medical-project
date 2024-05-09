@@ -11,7 +11,7 @@ try {
     if (!userexist) {
         return res.status(404).send("You are not a valid user")
     }
-    const listeduser= await listed_user.findOne({email:useremail}).populate("doctor_detail").select({password:0});
+    const listeduser= await listed_user.findOne({email:useremail}).select({password:0});
     console.log(listeduser)
     if (!listed_user) {
         return res.status(404).send("No data found")
@@ -32,7 +32,7 @@ try {
     if (!userexist) {
         return  res.status(404).send("You are not a doctor")
     }
-    const data= await doctor_model.findOne({email:email}).populate("patient").select({password:0});
+    const data= await doctor_model.findOne({email:email}).select({password:0});
     return res.status(200).json({data})
 
     

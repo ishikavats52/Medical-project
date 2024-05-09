@@ -1,5 +1,10 @@
 import React from 'react';
 
+import ContactSection from './Contact';
+import AppointmentSection from './Appointment';
+import DoctorsSection from './Doctorsection';
+
+
 function Home() {
   return (
     <>
@@ -32,6 +37,7 @@ function Home() {
               provident at corporis debitis, dolore ad necessitatibus quos, et est assumenda a consectetur.
               Dolorum optio nihil modi quibusdam tempore distinctio nam!
             </p>
+
           </div>
           <div className="fac-1">
             <h1>Appointment</h1>
@@ -76,57 +82,13 @@ function Home() {
                   <i className="fab fa-youtube"></i>
                 </a>
               </div>
+
             </div>
           </div>
         </div>
       </div>
 
-      {/* Blog Section */}
-      <div className="container-fluid py-5">
-        <div className="container">
-          <div className="text-center mx-auto mb-5" style={{ maxWidth: '500px' }}>
-            <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
-            <h1 className="display-4">Our Latest Medical Blog Posts</h1>
-          </div>
-          <div className="row g-5">
-            {[
-              { img: 'img/blog-1.jpg', title: 'Dolor clita vero elitr sea stet dolor justo diam', desc: 'Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum clita rebum dolor stet amet justo', author: 'John Doe', views: 12345, comments: 123 },
-              { img: 'img/blog-2.jpg', title: 'Dolor clita vero elitr sea stet dolor justo diam', desc: 'Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum clita rebum dolor stet amet justo', author: 'John Doe', views: 12345, comments: 123 },
-              { img: 'img/blog-3.jpg', title: 'Dolor clita vero elitr sea stet dolor justo diam', desc: 'Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna rebum clita rebum dolor stet amet justo', author: 'John Doe', views: 12345, comments: 123 },
-            ].map((post, index) => (
-              <div key={index} className="col-xl-4 col-lg-6">
-                <div className="bg-light rounded overflow-hidden">
-                  <img className="img-fluid w-100" src={post.img} alt="" />
-                  <div className="p-4">
-                    <a className="h3 d-block mb-3" href="">
-                      {post.title}
-                    </a>
-                    <p className="m-0">{post.desc}</p>
-                  </div>
-                  <div className="d-flex justify-content-between border-top p-4">
-                    <div className="d-flex alignments-center">
-                      <img className="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="" />
-                      <small>{post.author}</small>
-                    </div>
-                    <div className="d-flex alignments-center">
-                      <small className="ms-3">
-                        <i className="far fa-eye text-primary me-1"></i>{post.views}
-                      </small>
-                      <small className="ms-3">
-                        <i className="far fa-comment text-primary me-1"></i>{post.comments}
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-            <div className="col-12 text-center">
-              <button className="btn btn-primary py-3 px-5">Load More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<AppointmentSection/>
       {/* Services Section */}
       <div className="container-fluid py-5">
         <div className="container">
@@ -156,8 +118,8 @@ function Home() {
           </div>
         </div>
       </div>
+<ContactSection/>
 
-     
     </>
   );
 }

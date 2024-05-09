@@ -7,7 +7,14 @@ import Login from './component/Login'
 import Register from './component/Register'
 import Footer from './component/Footer'
 import Logout from './component/Logout'
-import Dashboard from './component/Dashboard'
+
+import MedicalDashboard from './component/das'
+// import MedicalWebsiteHomePage from './component/Home'
+import MedicalWebsite from './component/Home'
+import DoctorRegistrationForm from './component/Doctorlogin'
+// import MedicalVisits from './component/Patient'
+// import Component from './component/nearby'
+
 
 function App() {
   return (
@@ -17,10 +24,13 @@ function App() {
       <Route path='/Login' element={<Login/>}/>
       <Route path='/Logout' element={<Logout/>}/>
       <Route path='/Register' element={<Register/>}/>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/Dashboard' element={<Dashboard/>}/>
-
+      <Route path='/' element={<MedicalWebsite/>}/>
+      <Route path='/dash' element={<MedicalDashboard/>}/>
+      {/* <Route path='/daspatient' element={<MedicalVisits/>}/> */}
+      <Route path='/DocReg' element={<DoctorRegistrationForm/>}/>
     </Routes>
+    
+
      <Footer/>
     </>
   )

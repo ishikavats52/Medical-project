@@ -1,4 +1,6 @@
-const{Schema,model}= require("require")
+
+const{Schema,model,Types}= require("mongoose")
+
 const ratingmodel= new Schema({
     username:{
         required:true,
@@ -8,14 +10,23 @@ const ratingmodel= new Schema({
         required:true,
         type:String
     },
-    docname:{
+
+    doc_id:{
         required:true,
-        type:String
+        type:  String,
     },
+
     rating:{
+        required:true,
+
+type:Number
+    },
+    review:{
         required:true,
 type:String
     }
-},{timestaps:true});
+},{timestamps: true});
 
 const rate= new model("doc_rating", ratingmodel);
+module.exports=rate;
+

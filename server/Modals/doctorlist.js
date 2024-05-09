@@ -9,10 +9,10 @@ const doctorlist= new Schema ({
         required:true
     },
     patient:[{
-        type:Schema.Types.Mixed,
-        ref:"normal_user",
-        required:true
-    }]
+       type:Object,
+       required:true
+    }],
+    
 },{
    timestamps:true
 })
