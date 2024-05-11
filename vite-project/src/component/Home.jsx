@@ -1,8 +1,8 @@
 import React from 'react';
 
 import ContactSection from './Contact';
-import AppointmentSection from './Appointment';
-import DoctorsSection from './Doctorsection';
+// import AppointmentSection from './Appointment';
+// import DoctorsSection from './Doctorsection';
 
 
 function Home() {
@@ -10,15 +10,15 @@ function Home() {
     <>
      <div className="hero-div">
       <img
-        src="img/1000_F_466414200_TUwqAaiQOM9RhMG38DXW03WXbzh4lHkX.jpg"
+        src="img/image 11 (1) 1.png"
         alt=""
         srcSet=""
       />
       <div className="hero-content">
         <p className="p1 d-flex">Secure your world now</p>
-        <h6>Excellence, Dedicated, and Experienced Laboratory Technologists</h6>
+        <h6>Expertise, Commitment, and Proficiency in Blockchain Technology.</h6>
         <h1 className="hero-content-h1">
-          Subtle Clinical & <br /> Laboratory Tests!
+           De-Centralised Data storing
         </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, reiciendis!</p>
         <div className="btns d-flex justify-content-evenly">
@@ -31,7 +31,7 @@ function Home() {
         <h1>Facilities We Offer</h1>
         <div className="facilitydiv">
           <div className="fac-1">
-            <h1>Appointment</h1>
+            <h1>Block chain based data storing</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum commodi quisquam quas, harum
               provident at corporis debitis, dolore ad necessitatibus quos, et est assumenda a consectetur.
@@ -40,7 +40,7 @@ function Home() {
 
           </div>
           <div className="fac-1">
-            <h1>Appointment</h1>
+            <h1>Normal data storing</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum commodi quisquam quas, harum
               provident at corporis debitis, dolore ad necessitatibus quos, et est assumenda a consectetur.
@@ -50,45 +50,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="container-fluid py-2 border-bottom d-none d-lg-block">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-              <div className="d-inline-flex align-items-center">
-                <a className="text-decoration-none text-body pe-3" href="">
-                  <i className="bi bi-telephone me-2"></i>+012 345 6789
-                </a>
-                <span className="text-body">|</span>
-                <a className="text-decoration-none text-body px-3" href="">
-                  <i className="bi bi-envelope me-2"></i>info@example.com
-                </a>
-              </div>
-            </div>
-            <div className="col-md-6 text-center text-lg-end">
-              <div className="d-inline-flex align-items-center">
-                <a className="text-body px-2" href="">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a className="text-body px-2" href="">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a className="text-body px-2" href="">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-                <a className="text-body px-2" href="">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a className="text-body ps-2" href="">
-                  <i className="fab fa-youtube"></i>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-<AppointmentSection/>
+      
+{/* <AppointmentSection/> */}
       {/* Services Section */}
       <div className="container-fluid py-5">
         <div className="container">

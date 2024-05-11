@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from '../ContextApi/Authcontext';
@@ -15,6 +15,7 @@ function Register() {
   })
   const handlesubmit= async(e)=>{
 e.preventDefault();
+console.log("hi")
 try {
   const data= await fetch("http://localhost:4000/Api/user",{
     method:"POST",
@@ -23,16 +24,29 @@ try {
     },
     body:JSON.stringify(user)
   })
+  const response= await data.json()
+  console.log(response)
+ 
   if (data.ok) {
-    // setuser("")
+    console.log("fetched")
+    setuser({
+      "username":"",
+      "phone":"" ,
+      "email":"",
+      "password":"",
+      "country":"India"
+    })
     toast.success("Success !");
 setTimeout(()=>{
 navigate("/Login")
 },1000)
   }
+  else{
+    toast.error("User already exist  ")  
+  }
   
 } catch (error) {
-  toast.error("User already exist or internal server error ")
+  toast.error("internal server error ")
   console.log(error)
 }
   }
@@ -48,8 +62,9 @@ setuser((prev) => ({
   return (
    <>
     <div className="sec1"><div className="wrapper">
-      <div className="title">Register Form</div>
-      <form action="#" onSubmit={handlesubmit}>
+    <h5 style={{textAlign:"center"}}>Doctor register:<Link to={"/DocReg"}>Click here</Link></h5>
+      <div className="title" style={{textAlign:"center"}}>Register Form</div>
+      <form  onSubmit={handlesubmit}>
         <div className="field">
           <input type="text" required value={user.username} name='username' onChange={handlechange}/>
           <label>Full Name</label>
@@ -77,7 +92,9 @@ setuser((prev) => ({
           Already a member? <a href="#">Login here</a>
         </div>
       </form>
-    </div></div>
+      
+    </div>
+    </div>
     <ToastContainer />
    </>
   )

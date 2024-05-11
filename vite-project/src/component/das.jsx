@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../ContextApi/Authcontext';
-import { useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../index.css"
@@ -8,6 +8,8 @@ export default function MedicalDashboard() {
   const [patients, setPatients] = useState([]);
   const [dataset, setdataset] = useState([])
   const [report, setreport] = useState([])
+  const[loading,setloading]=useState(false)
+  const[path,setpath]=useState("")
   const [locationdata, setlocation] = useState({
     "latitude":"",
     "longitude":""
@@ -58,7 +60,7 @@ const time= patientdetail.time=timedata
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": `${token}`
+            "Authorization": `Bearer ${token}`
 
           }
         })
@@ -78,6 +80,7 @@ const time= patientdetail.time=timedata
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {
+      setloading(true)
       const updatedstate={
         ...patientdetail,
         location:locationdata,
@@ -94,6 +97,7 @@ const time= patientdetail.time=timedata
       })
       const data = await response.json()
       if (response.ok) {
+        setloading(false)
         toast.success("User created !");
         setdataset(data)
         setpatientdata({
@@ -109,6 +113,7 @@ const time= patientdetail.time=timedata
         })
         setreport([])
       }
+      
     } catch (error) {
       toast.error("user not exist or internal server error");
       console.log(error)
@@ -140,6 +145,11 @@ const time= patientdetail.time=timedata
       reports: report,
     }));
   }, [report]);
+  useEffect(()=>{
+const {pathname}=window.location;
+console.log(pathname)
+setpath(pathname)
+  })
   return (
     <>
       <div className="container-fluid">
@@ -211,9 +221,9 @@ const time= patientdetail.time=timedata
                       Dashboard
                     </a>
                   </li>
+                  <li></li>
 
-                  {/* Add more nav links here */}
-                  {/* Truncated for brevity */}
+                  
                 </ul>
               </nav>
 
@@ -291,7 +301,9 @@ const time= patientdetail.time=timedata
                 <span className="visually-hidden">Toggle user menu</span>
               </button>
             </header>
-
+            <h4>To see appointment click here-<Link to={"/dash/Appointment"} style={{textDecoration:"none"}}>Appointment</Link></h4>
+            <h6>{path=="/dash/Appointment"?<Link style={{textDecoration:"none"}} to="/dash">Remove</Link>:null}</h6>
+            <Outlet/>
             <main className="flex-grow p-4">
               <div className="row">
                 <div className="col-md-6">
@@ -384,12 +396,12 @@ const time= patientdetail.time=timedata
                           <input type="file" name="reports" id="" onChange={handlechange} />
                         </div>
 
-                        <button
+                       { loading?<h1>Loading....</h1>:<button
                           type="submit"
                           className="btn btn-primary w-full"
                         >
                           Add Patient
-                        </button>
+                        </button>}
                       </form>
                     </div>
                   </div>
@@ -428,13 +440,19 @@ const time= patientdetail.time=timedata
                       </table>
                       <h4>{`Total Patient listed:${patients.length}`}</h4>
                     </div>
+                   
                   </div>
+                 
                 </div>
               </div>
+             
             </main>
+           
           </div>
         </div>
+        
       </div>
+      
       <ToastContainer />
     </>
   );

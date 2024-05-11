@@ -28,7 +28,8 @@ console.log(verifieduser)
 
     req.emaildata =verifieduser.email;
     console.log(req.emaildata)
-    req.username = verifieduser.username;
+    req.username = verifieduser.username;console.log(verifieduser.username)
+    req.phone=verifieduser.phone;
 
     next();
   } catch (error) {

@@ -23,7 +23,9 @@ const normaluserschema = new Schema({
     otp: {
         type: String,
         required: true
-    }
+    },
+
+
 }, { timestamps: true })
 const normal_user = new model("normal_user", normaluserschema);
 
@@ -74,14 +76,14 @@ const doctor_schema = new Schema({
     },
     location: {
         type: {
-            type: String,
-            default: 'Point',
+          type: String,
+          default: 'Point',
         },
         coordinates: {
-            type: [Number],
-            required: true,
+          type: [Number],
+        //   index: '2dsphere',
         },
-    },
+      },
 
 
 }, { timestamps: true })
