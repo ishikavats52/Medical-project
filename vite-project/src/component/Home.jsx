@@ -1,8 +1,10 @@
 import React from 'react';
 
 import ContactSection from './Contact';
+
 // import AppointmentSection from './Appointment';
 // import DoctorsSection from './Doctorsection';
+
 
 
 function Home() {
@@ -50,8 +52,10 @@ function Home() {
         </div>
       </div>
 
+
       
 {/* <AppointmentSection/> */}
+
       {/* Services Section */}
       <div className="container-fluid py-5">
         <div className="container">

@@ -22,11 +22,13 @@ const patient_data = async (req, res) => {
         return res.status(200).json({ listeduser })
     } catch (error) {
         console.log(error)
+
     }
 }
 
 const userdetailtodoctor = async (req, res) => {
     const { email } = req.user;
+
 
     try {
         const userexist = await doctor.findOne({ email });
@@ -35,6 +37,7 @@ const userdetailtodoctor = async (req, res) => {
         }
         const data = await doctor_model.findOne({ email: email }).select({ password: 0 });
         return res.status(200).json({ data })
+
 
 
     } catch (error) {

@@ -2,6 +2,7 @@ const { normal_user, doctor } = require("../Modals/User");
 const bcrypt= require("bcrypt")
 const jwt=require("jsonwebtoken")
 const nodemailer = require('nodemailer');
+
 const register_user = async (req, res) => {
   const {
     username,
@@ -14,6 +15,7 @@ const register_user = async (req, res) => {
     category,
     location,
   } = req.body;
+
 
   try {
     const userexist = degreecode
@@ -94,6 +96,7 @@ try {
   // console.log(isdoc)
   const userexist= await doctor.findOne({email}) || await normal_user.findOne({email});
   // console.log(userexist)
+
   if (!userexist) {
     console.log("hitting")
     return res.status(404).json({error:"not exist"})
@@ -101,6 +104,7 @@ try {
 
   }
   else{
+
     const verifypass= await bcrypt.compare(password,userexist.password);
     if (!verifypass) {
       return res.status(400).send("wrong password");

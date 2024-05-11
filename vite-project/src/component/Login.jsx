@@ -4,12 +4,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from '../ContextApi/Authcontext';
 function Login() {
+
   const navigate = useNavigate()
   const { auth, setdoctor } = useAuth()
 
   const [user, setuser] = useState({
     "email": "",
     "password": ""
+
   })
   const handlesubmit = async (e) => {
     e.preventDefault();

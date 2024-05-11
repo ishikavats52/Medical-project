@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -252,3 +253,4 @@ const DoctorRegistrationForm = () => {
     };
 
     export default DoctorRegistrationForm;
+
