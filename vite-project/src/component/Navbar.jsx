@@ -4,6 +4,7 @@ import { useAuth } from '../ContextApi/Authcontext'
 
 function Navbar() {
   const{isverified,username}= useAuth()
+  let{isdoctor}=useAuth()
   return (
    <>
    <nav><div className="main-nav d-flex justify-content-evenly align-items-center">
@@ -12,8 +13,8 @@ function Navbar() {
         <Link to={"/"}>Home</Link>
         <a href="">About</a>
         <a href="">Appointment</a>
-        <a href="">Near BY Doctor</a>
-        <a href="">Dashboard</a>
+        <Link to={"/bookappointment"}>Near BY Doctor</Link>
+       { isdoctor?<Link to={"/dash"}>Dashboard</Link>:<Link to={"/patientdash"}>Dashboard</Link>}
         
     </div>
     {isverified?<div className="userbtn">
