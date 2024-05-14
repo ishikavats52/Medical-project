@@ -107,7 +107,7 @@ try {
 
     const verifypass= await bcrypt.compare(password,userexist.password);
     if (!verifypass) {
-      return res.status(400).send("wrong password");
+      return res.status(400).json({"password":"Invalid password"});
     }
  const token= jwt.sign({userexist},"ayushchauhanjwtkey",{expiresIn:"10day"})
  return res.status(200).json({userexist,token});
@@ -132,6 +132,7 @@ if (userexist) {
 return res.status(404);
 } catch (error) {
   console.log(error)
+  return res.status(500).send("Internal server error")
 }
 
 }
