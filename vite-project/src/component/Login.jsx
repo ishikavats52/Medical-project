@@ -9,6 +9,7 @@ function Login() {
   const navigate = useNavigate()
   const { auth, setdoctor } = useAuth()
 const[res,setres]=useState()
+
   const [user, setuser] = useState({
     "email": "",
     "password": ""
@@ -25,7 +26,9 @@ const[res,setres]=useState()
         body: JSON.stringify(user)
       })
       const response = await data.json()
+
       setres(response)
+
       if (data.ok) {
         console.log(response.userexist.isdoctor)
         if (response.userexist.isdoctor == "1") {
@@ -48,11 +51,13 @@ const[res,setres]=useState()
         }, 1000)
       }
       else{
+
         toast.error(`${response.password} or username`);  
       }
     } catch (error) {
       toast.error(`${res.password}`);
       console.log(res.password)
+
     }
   }
   const handlechange = (e) => {

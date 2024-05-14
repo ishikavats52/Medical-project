@@ -26,7 +26,7 @@ setuser((prev)=>({
     const handlesubmit = async (e) => {
         e.preventDefault();
         try {
-        
+
           const response = await fetch(`http://localhost:4000/Api/Appointment/${doctor_id}`, {
             method: "POST",
             headers: {

@@ -1,9 +1,12 @@
+
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../ContextApi/Authcontext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const AppointmentSection = () => {
+
 const {token,setdoctorsdata}=useAuth()
+
   const[user,setuser]=useState({
     "disease":"",
     "address":"",
@@ -95,23 +98,28 @@ const handlesubmit=async (e)=>{
   }
 }
   return (<>
+
     <div className="container-fluid py-5">
       <div className="container">
         <div className="row gx-5">
           <div className="col-lg-6 mb-5 mb-lg-0">
             <div className="mb-4">
+
               <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">Send query</h5>
               <h1 className="display-4">Send Query and Find all doctor near you</h1>
+
             </div>
             <p className="mb-5">
               Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.
             </p>
+
             <a className="btn btn-outline-primary rounded-pill py-3 px-5" href="">
               Read More
             </a>
           </div>
 
           <div className="col-lg-6">
+
             <div className="bg-light text-center rounded p-5">
               <h1 className="mb-4">Send Query</h1>
               <form onSubmit={handlesubmit}>
@@ -203,7 +211,9 @@ const handlesubmit=async (e)=>{
           </div>
         </div>
       </div>
+
     </div> <ToastContainer /></>
+
   );
 };
 
