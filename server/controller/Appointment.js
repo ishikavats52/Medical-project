@@ -4,7 +4,10 @@ const bookappointment = async (req, res) => {
     const doctoremail = req.emaildata;
     const Doctor_id = req.params.Id;
     const patientname =  req.username ;
-    const { date, query, status="Pending", time } = req.body;
+
+    const { date, query, status, time } = req.body;
+    console.log(query);console.log(status)
+
     console.log(req.body,doctoremail,Doctor_id,patientname)
     console.log("hi")
     try {
@@ -23,12 +26,12 @@ const bookappointment = async (req, res) => {
       }
   
       const appointment = await appointmentstatus.create({
-        patientname:patientname,
+        Patientname:patientname,
         Doctor_id,
         date,
         query,
-        status,
-        time,
+        Status:status,
+
       });
   
       const { _id } = appointment;
@@ -50,6 +53,15 @@ const bookappointment = async (req, res) => {
       return res.status(500).json({ message: "Internal server error", error: error.message });
     }
   };
+
+  // const sendappointmentstodoc= async ()=>{
+  //   try {
+  //     const{}
+  //   } catch (error) {
+      
+  //   }
+  // }
+
   
   module.exports = { bookappointment };
   

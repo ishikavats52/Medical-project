@@ -4,7 +4,9 @@ import { useAuth } from '../ContextApi/Authcontext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const AppointmentSection = () => {
-const {token,setdoctorsdata,doctor_id}=useAuth()
+
+const {token,setdoctorsdata}=useAuth()
+
   const[user,setuser]=useState({
     "disease":"",
     "address":"",
@@ -118,6 +120,7 @@ const handlesubmit=async (e)=>{
 
           <div className="col-lg-6">
 
+            <div className="bg-light text-center rounded p-5">
               <h1 className="mb-4">Send Query</h1>
               <form onSubmit={handlesubmit}>
                 <div className="row g-3">
@@ -153,12 +156,53 @@ const handlesubmit=async (e)=>{
                                 />
                             </div>
 
- 
+                  {/* <div className="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      className="form-control bg-white border-0"
+                      placeholder="Your Name"
+                      style={{ height: '55px' }}
+                    />
+                  </div> */}
+
+                  {/* <div className="col-12 col-sm-6">
+                    <input
+                      type="email"
+                      className="form-control bg-white border-0"
+                      placeholder="Your Email"
+                      style={{ height: '55px' }}
+                    />
+                  </div> */}
+
+                  {/* <div className="col-12 col-sm-6">
+                    <div className="date" id="date" data-target-input="nearest">
+                      <input
+                        type="text"
+                        className="form-control bg-white border-0 datetimepicker-input"
+                        placeholder="Date"
+                        data-target="#date"
+                        data-toggle="datetimepicker"
+                        style={{ height: '55px' }}
+                      />
+                    </div>
+                  </div> */}
+{/* 
+                  <div className="col-12 col-sm-6">
+                    <div className="time" id="time" data-target-input="nearest">
+                      <input
+                        type="text"
+                        className="form-control bg-white border-0 datetimepicker-input"
+                        placeholder="Time"
+                        data-target="#time"
+                        data-toggle="datetimepicker"
+                        style={{ height: '55px' }}
+                      />
+                    </div>
+                  </div> */}
 
                   <div className="col-12">
                     <button className="btn btn-primary w-100 py-3" type="submit">
                       Find Doctor
-
                     </button>
                   </div>
                 </div>
@@ -168,7 +212,7 @@ const handlesubmit=async (e)=>{
         </div>
       </div>
 
-     <ToastContainer /></>
+    </div> <ToastContainer /></>
 
   );
 };

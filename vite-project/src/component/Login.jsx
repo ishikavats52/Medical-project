@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from '../ContextApi/Authcontext';
+
 function Login() {
 
   const navigate = useNavigate()
   const { auth, setdoctor } = useAuth()
+const[res,setres]=useState()
 
   const [user, setuser] = useState({
     "email": "",
@@ -24,6 +26,9 @@ function Login() {
         body: JSON.stringify(user)
       })
       const response = await data.json()
+
+      setres(response)
+
       if (data.ok) {
         console.log(response.userexist.isdoctor)
         if (response.userexist.isdoctor == "1") {
@@ -46,11 +51,13 @@ function Login() {
         }, 1000)
       }
       else{
-        toast.error("user not exist");  
+
+        toast.error(`${response.password} or username`);  
       }
     } catch (error) {
-      toast.error("error !");
-      console.log(error)
+      toast.error(`${res.password}`);
+      console.log(res.password)
+
     }
   }
   const handlechange = (e) => {
